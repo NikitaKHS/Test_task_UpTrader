@@ -1,0 +1,5 @@
+.menu-root, .menu-root ul { list-style: none; margin: 0; padding: 0 }
+.menu-root li { margin: 0.2em 0 }
+.menu-root li > ul { display: none; margin-left: 1.5em }
+.menu-root li.open > ul { display: block }
+.menu-root li.active > a { font-weight: bold; color: #007bff }
