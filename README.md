@@ -17,11 +17,11 @@
 
 ## Как запустить
 
-Склонируйте репозиторий и перейдите в папку с manage.py
-Создайте виртуальное окружение и активируйте его
-Установите Django
-Выполните python manage.py makemigrations и python manage.py migrate
-Создайте супер-пользователя через python manage.py createsuperuser
-Запустите сервер python manage.py runserver и открывайте:
+1. Склонируйте репозиторий и перейдите в папку с manage.py
+2. Создайте виртуальное окружение и активируйте его
+3. Установите Django
+4. Выполните python manage.py makemigrations и python manage.py migrate
+5. Создайте супер-пользователя через python manage.py createsuperuser
+6. Запустите сервер python manage.py runserver и открывайте:
 – главная страница: http://127.0.0.1:8000/
 – админка: http://127.0.0.1:8000/admin/
