@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
 <ul class="menu-root">
 {% for n in nodes %}
-  {% include 'tree_menu/node.html' with n=n %}
+  {% include "tree_menu/node.html" with n=n %}
 {% endfor %}
 </ul>
-
-
-</body>
-</html>

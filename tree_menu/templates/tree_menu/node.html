@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 <li class="{% if n.cur %}active{% endif %}{% if n.open %} open{% endif %}">
   <a href="{{ n.i.get_url }}">{{ n.i.title }}</a>
   {% if n.kids and n.open %}
-  <ul>
-    {% for child in n.kids %}
-      {% include 'tree_menu/node.html' with n=child %}
+    <ul>
+    {% for c in n.kids %}
+      {% include "tree_menu/node.html" with n=c %}
     {% endfor %}
-  </ul>
+    </ul>
   {% endif %}
 </li>
-
-</body>
-</html>
