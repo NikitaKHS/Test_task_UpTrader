@@ -19,7 +19,7 @@ def mark_active(nodes, path):
         node['cur'] = node['i'].get_url() == path
         if node['kids']:
             mark_active(node['kids'], path)
-            node['open'] = any(child['cur'] or child['open'] for child in node['kids']) or node['cur']
+            node['open'] = any(c['cur'] or c['open'] for c in node['kids']) or node['cur']
         else:
             node['open'] = node['cur']
 
@@ -28,7 +28,11 @@ def draw_menu(context, name):
     request = context.get('request')
     if not request:
         return {'nodes': []}
-    items = list(MenuItem.objects.filter(menu__name=name).select_related('parent'))
+    items = list(
+        MenuItem.objects
+            .filter(menu__name=name)
+            .select_related('parent')
+    )
     tree = build_tree(items)
     mark_active(tree, request.path)
     return {'nodes': tree}
